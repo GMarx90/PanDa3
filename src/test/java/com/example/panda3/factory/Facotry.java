@@ -1,45 +1,45 @@
 package com.example.panda3.factory;
 
-import com.example.panda3.entity.User;
+import com.example.panda3.entity.UserEntity;
 
 public class Facotry {
 
-    public User createUserWithProperFiled(){
+    public UserEntity createUserWithProperFiled(){
         Long id=1L;
-        User user= new User(id, "Piotr", "Kowalski", "piotrkowalski@gmail.com", "Password12@3");
-        return user;
+        UserEntity userEntity = new UserEntity(id, "Piotr", "Kowalski", "piotrkowalski@gmail.com", "Password12@3");
+        return userEntity;
     }
 
-    public User createUserWithWrongPassword(){
+    public UserEntity createUserWithWrongPassword(){
         Long id=1L;
-        User user= new User(id, "Piotr", "Kowalski", "piotr.kowalski@gmail.com", "Password");
-        return user;
+        UserEntity userEntity = new UserEntity(id, "Piotr", "Kowalski", "piotr.kowalski@gmail.com", "Password");
+        return userEntity;
     }
 
-    public User createUserWithWrongMailAndPassword(){
+    public UserEntity createUserWithWrongMailAndPassword(){
         Long id=1L;
-        User user= new User(id, "Piotr", "Kowalski", "piotr.kowalski.gmail.com", "Password");
-        return user;
+        UserEntity userEntity = new UserEntity(id, "Piotr", "Kowalski", "piotr.kowalski.gmail.com", "Password");
+        return userEntity;
     }
-    public User createUserWithWrongMail(){
+    public UserEntity createUserWithWrongMail(){
         Long id=1L;
-        User user= new User(id, "Piotr", "Kowalski", "piotr.kowalski.gmail.com", "Password!@#123");
-        return user;
+        UserEntity userEntity = new UserEntity(id, "Piotr", "Kowalski", "piotr.kowalski.gmail.com", "Password!@#123");
+        return userEntity;
     }
 
-    public User createUserWithoutName(){
+    public UserEntity createUserWithoutName(){
         Long id=1L;
-        User user= new User(id, "", "Kowalski", "piotr.kowalski.gmail.com", "Password!@#123");
-        user.setFirstName(null);
-        return user;
+        UserEntity userEntity = new UserEntity(id, "", "Kowalski", "piotr.kowalski.gmail.com", "Password!@#123");
+        userEntity.setFirstName(null);
+        return userEntity;
     }
-    public User createUserWithToLongNameAndSurname(){
+    public UserEntity createUserWithToLongNameAndSurname(){
         Long id=1L;
-        User user= new User(
+        UserEntity userEntity = new UserEntity(
                 id, "PiotasdadasdasfasfasfasfafasfasKoasfafafafafafafafasfasfasfasfasfafwalskiKoasfafafafafafafafasfasfasfasfasfafwalskiKoasfafafafafafafafasfasfasfasfasfafwalskifafsasfar",
                 "KoasfafafafafafafafasfasfasfasfasfafwalskiKoasfafafafafafafafasfasfasfasfasfafwalskiKoasfafafafafafafafasfasfasfasfasfafwalskiKoasfafafafafafafafasfasfasfasfasfafwalski",
                 "piotr.kowalski@gmail.com",
                 "Password!@#123");
-        return user;
+        return userEntity;
     }
 }

@@ -10,7 +10,7 @@ import java.util.Objects;
 @Data
 @Entity
 @Table(name= "users")
-public class User {
+public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,7 +36,7 @@ public class User {
     private String password;
 
 
-    public User(Long id, String firstName, String lastName, String email, String password) {
+    public UserEntity(Long id, String firstName, String lastName, String email, String password) {
         if (firstName == null) {
             throw new IllegalArgumentException("First name cannot be null");
         }
