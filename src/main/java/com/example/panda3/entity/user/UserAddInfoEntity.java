@@ -1,9 +1,6 @@
-package com.example.panda3.entity;
+package com.example.panda3.entity.user;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -17,8 +14,9 @@ public class UserAddInfoEntity {
     private Long id;
     private String driveLicenceCategory;
     private int age;
-
+    @OneToOne
+    @JoinColumn(name = "address_id")
     private AddressEntity addressEntity;
-private String phoneNumber;
+    private String phoneNumber;
 
 }

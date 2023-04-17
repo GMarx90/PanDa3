@@ -1,6 +1,7 @@
 package com.example.panda3.factory;
 
-import com.example.panda3.entity.UserEntity;
+import com.example.panda3.entity.car.VehicleEntity;
+import com.example.panda3.entity.user.UserEntity;
 
 public class Facotry {
 
@@ -41,5 +42,47 @@ public class Facotry {
                 "piotr.kowalski@gmail.com",
                 "Password!@#123");
         return userEntity;
+    }
+    public VehicleEntity properVehicleFor5Person(){
+        VehicleEntity vehicleEntity =
+                new VehicleEntity(1L,
+                        "Ford",
+                        "Mustang",
+                        2020,
+                        5,
+                        480
+                );
+    return vehicleEntity;
+    }   public VehicleEntity vehicleForMinusPrice(){
+        VehicleEntity vehicleEntity =
+                new VehicleEntity(1L,
+                        "Ford",
+                        "Mustang",
+                        2020,
+                        5,
+                        -480
+                );
+    return vehicleEntity;
+    }
+    public VehicleEntity vehicleFromFuture(){
+        VehicleEntity vehicleEntity =
+                new VehicleEntity(1L,
+                        "Ford",
+                        "Mustang",
+                        2030,
+                        5,
+                        480
+                );
+    return vehicleEntity;
+    }    public VehicleEntity VehicleFor3Person(){
+        VehicleEntity vehicleEntity =
+                new VehicleEntity(1L,
+                        "Ford",
+                        "Mustang",
+                        2020,
+                        3,
+                        480
+                );
+    return vehicleEntity;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.panda3.entity;
+package com.example.panda3.entity.user;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

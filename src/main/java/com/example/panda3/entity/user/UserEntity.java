@@ -1,4 +1,4 @@
-package com.example.panda3.entity;
+package com.example.panda3.entity.user;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -46,6 +46,11 @@ public class UserEntity {
         this.email = email;
         this.password = password;
     }
+
+    public UserEntity() {
+
+    }
+
     public void setFirstName(String firstName) {
         try {
             this.firstName = Objects.requireNonNull(firstName, "First name cannot be null");

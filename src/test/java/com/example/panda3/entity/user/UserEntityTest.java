@@ -1,5 +1,6 @@
-package com.example.panda3.entity;
+package com.example.panda3.entity.user;
 
+import com.example.panda3.entity.user.UserEntity;
 import com.example.panda3.factory.Facotry;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
