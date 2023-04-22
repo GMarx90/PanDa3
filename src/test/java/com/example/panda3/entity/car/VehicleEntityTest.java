@@ -26,7 +26,7 @@ public class VehicleEntityTest {
 
         VehicleEntity expetedCar = facotry.properVehicleFor5Person();
 
-        assertEquals(1L, expetedCar.getId());
+        assertEquals(1L, expetedCar.getIdCar());
         assertEquals("Ford", expetedCar.getModel());
         assertEquals("Mustang", expetedCar.getMake());
         assertEquals(2020, expetedCar.getYearOfProduction());

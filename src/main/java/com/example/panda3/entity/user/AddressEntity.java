@@ -17,7 +17,7 @@ public class AddressEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long address_id;
 
     @NotBlank(message = "Name cannot be null")
     private String city;

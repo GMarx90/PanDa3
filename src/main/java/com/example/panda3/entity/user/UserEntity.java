@@ -14,7 +14,7 @@ public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idUser;
 
     @NonNull
     @Size(min = 1, max = 20, message = "Name must be between 1 and 20 characters")
@@ -36,11 +36,11 @@ public class UserEntity {
     private String password;
 
 
-    public UserEntity(Long id, String firstName, String lastName, String email, String password) {
+    public UserEntity(Long idUser, String firstName, String lastName, String email, String password) {
         if (firstName == null) {
             throw new IllegalArgumentException("First name cannot be null");
         }
-        this.id = id;
+        this.idUser = idUser;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

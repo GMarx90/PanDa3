@@ -1,6 +1,5 @@
 package com.example.panda3.entity.user;
 
-import com.example.panda3.entity.user.UserEntity;
 import com.example.panda3.factory.Facotry;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -24,7 +23,7 @@ public class UserEntityTest {
     public void constructorTest() {
         UserEntity userEntity = new UserEntity(1L, "Grzegorz", "Braun", "mail", "Password");
 
-        Assertions.assertEquals(1L, userEntity.getId());
+        Assertions.assertEquals(1L, userEntity.getIdUser());
         Assertions.assertEquals("Grzegorz", userEntity.getFirstName());
         Assertions.assertEquals("Braun", userEntity.getLastName());
         Assertions.assertEquals("mail", userEntity.getEmail());
