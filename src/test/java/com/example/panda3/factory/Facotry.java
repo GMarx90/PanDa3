@@ -75,7 +75,7 @@ public class Facotry {
                 );
     return vehicleEntity;
     }    public VehicleEntity VehicleFor3Person(){
-        VehicleEntity vehicleEntity =
+        VehicleEntity vehicleEntity1 =
                 new VehicleEntity(1L,
                         "Ford",
                         "Mustang",
@@ -83,6 +83,6 @@ public class Facotry {
                         3,
                         480
                 );
-    return vehicleEntity;
+    return vehicleEntity1;
     }
 }
