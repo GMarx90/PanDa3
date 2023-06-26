@@ -16,7 +16,6 @@ import java.util.List;
 @Entity
 public class VehicleEntity {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCar;
@@ -29,7 +28,7 @@ public class VehicleEntity {
     private double price;
     private boolean isAvailable;
     @OneToMany(mappedBy = "vehicleEntity", fetch = FetchType.LAZY)
-    private List<RentalEntity> bookings= new ArrayList<>();
+    private List<RentalEntity> bookings = new ArrayList<>();
 
 
     public void setIdCar(Long id) {
