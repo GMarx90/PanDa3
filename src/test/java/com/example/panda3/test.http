@@ -1,0 +1,75 @@
+POST /admin/addVehicle HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "model": "Ford Mustang",
+  "make": "Ford",
+  "yearOfProduction": 2022,
+  "seatCount": 4,
+  "price": 50000.0,
+  "isAvailable": true
+}
+######
+GET /Cars HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+######
+DELETE /admin/deleteVehicle HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "idCar": 1
+}
+
+####
+POST /admin/addUser HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "password": "myPassword123",
+  "driveLicenceCategory": "B",
+  "age": 30
+}
+
+####
+DELETE /admin/deleteUser HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com"
+}
+
+####
+POST /1/rent HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com"
+}
+
+####
+POST /1/return HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com"
+}
+
+####
+GET /rentCars HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com"
+}
