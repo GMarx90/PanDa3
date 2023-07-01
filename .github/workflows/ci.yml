@@ -8,6 +8,14 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
 
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: Build JAR file
+        run: mvn clean package
+
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -15,3 +23,4 @@ jobs:
           username: f36768_qwerty12345
           password: H%)kfP%OIC2u1yUy8t9&
           local-dir-run: ./public_html/
+          include: target/your-project.jar
