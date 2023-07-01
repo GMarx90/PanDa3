@@ -19,7 +19,7 @@ public class RentController {
             description = "Rent a car by providing the car ID and user data.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Car rented successfully"),
-            @ApiResponse(responseCode = "400", description = "Invalid request"),
+            @ApiResponse(responseCode = "500", description = "Invalid request"),
             @ApiResponse(responseCode = "404", description = "Car not found")
     })
     public ResponseEntity<String> rentCar(@PathVariable Long carId, @RequestBody String jsonUserData) {

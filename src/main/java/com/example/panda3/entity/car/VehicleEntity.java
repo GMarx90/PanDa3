@@ -23,4 +23,13 @@ public class VehicleEntity {
     public void setAvailable(boolean available) {
         this.isAvailable = available;
     }
+
+    public VehicleEntity(String model, String make, int yearOfProduction) {
+        this.model = model;
+        this.make = make;
+        this.yearOfProduction = yearOfProduction;
+    }
+
+    public VehicleEntity() {
+    }
 }

@@ -6,6 +6,8 @@ import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Data
 @Entity
@@ -34,6 +36,6 @@ public class UserEntity {
     }
 
     public void returnCar(VehicleEntity vehicleEntity){
-        rentedCars.remove(vehicleEntity);
+        this.rentedCars = this.rentedCars.stream().filter(c-> !Objects.equals(c.getId(), vehicleEntity.getCar_id())).collect(Collectors.toList());
     }
 }
