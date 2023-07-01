@@ -11,7 +11,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ftps://s1.ct8.pl
+          server: s1.ct8.pl
           username: f36768_qwerty12345
           password: H%)kfP%OIC2u1yUy8t9&
           local-dir-run: ./public_html/
